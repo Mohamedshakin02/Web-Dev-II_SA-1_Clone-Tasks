@@ -120,6 +120,7 @@ main h3{
     text-align: center;
 }
 
+
 .author-img img{
     width: 200px;
     border-radius: 50%;
@@ -133,4 +134,124 @@ footer{
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    header, nav {
+        margin: 30px;
+    }
+
+    nav{
+        width: 60%;
+    }
+
+    main{
+        width: 80%;
+    }
+
+    .logo img{
+        width: 80px;
+        height: auto;
+    }
+
+    main h1{
+        text-align: center;
+    }
+
+    .multi-paragraph{
+        column-count: 1;
+    }
+
+    .image-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-container div{
+        grid-area: span 1;
+    }
+
+    .album-cover-4{
+        display: none;
+    }
+
+    .intro, .multi-paragraph, footer{
+        padding:30px;
+    }
+
+    .author-section{
+        margin: auto;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 30px;
+        
+    }
+
+    footer{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 720px){
+    header, nav {
+        margin: 20px;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    nav{
+        width: 80%;
+    }
+    
+    .image-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro, .multi-paragraph, footer{
+        padding: 20px;
+    }
+
+    .author-section{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .author-section{
+        margin: auto;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        
+    }
+
+    footer{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    header, nav {
+        margin: 12px;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    .intro, .multi-paragraph, footer{
+        padding: 12px;
+    }
+
+    .author-section{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .author-section{
+        padding: 12px;
+    }
+
 }
