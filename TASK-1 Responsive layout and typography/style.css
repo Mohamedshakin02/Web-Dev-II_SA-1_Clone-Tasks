@@ -49,16 +49,12 @@ main{
     margin: auto;
 }
 
- main h1{
+main h1{
     font-size: 90px;
 }
 
-main h2{
+.sub-heading {
     font-size: 36px;
-}
-
-main h3{
-    font-size: 30px;
 }
 
 .intro, .multi-paragraph{
@@ -116,7 +112,7 @@ main h3{
     gap: 50px;
 }
 
-.author-section h2{
+.author-section .sub-heading {
     text-align: center;
 }
 
@@ -154,8 +150,9 @@ footer{
         height: auto;
     }
 
-    main h1{
+    main h1, .sub-heading{
         text-align: center;
+        font-size: 50px;
     }
 
     .multi-paragraph{
