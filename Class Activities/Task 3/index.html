@@ -1,0 +1,166 @@
+<!-- Task 3 -->
+<!-- Flexbox Tasks
+
+1 Flexbox Layout:
+
+Create a simple navigation bar using Flexbox. Include at least four links and style them to be horizontally aligned with even spacing.
+
+2. Card Design:
+
+I • Design a card component using Flexbox. The card should include an image, a title, a description, and a button. Ensure that the content is centered and responsive.
+
+3. Image Gallery:
+
+* Build a responsive image gallery using Flexbox. Arrange images in a row that wraps to a new line as the screen size decreases.
+
+4. Flexbox Quiz:
+
+* Create a quiz layout where questions are displayed in a column and answer choices are displayed in a row using Flexbox. Style it to be visually appealing.
+
+5. To-Do List:
+
+Create a simple to-do list application where the tasks are displayed using Flexbox. Each task should have a checkbox, a label, and a delete button, arranged in a flexible layout.-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox task</title>
+    <link rel="stylesheet" href="/Class Activities/Task 3/style.css">  <!-- linked to stylesheet file-->
+</head>
+<body id="Flexbox-Layout">
+    <!-- Responsive Navigation bar-->
+
+    <header>
+        <nav>
+            <a href="#Flexbox-Layout">Flexbox Layout</a>
+            <a href="#Flexbox-Layout">Card Design</a>
+            <a href="#Image Gallery">Image Gallery</a>
+            <a href="#Flexbox Quiz">Flexbox Quiz</a>
+            <a href="#To-Do List">To-Do List</a>
+        </nav>
+    </header>
+
+    <!--Responsive cards-->
+    <div class="card-container">
+        <div class="card-item">
+            <img src="/Class Activities/Task 3/images/conjuring 1.jpg" alt="">
+            <h3>Conjuring 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquid est consequatur, autem labore quas aliquam veniam velit culpa nam!</p>
+        </div>
+        <div class="card-item">
+            <img src="/Class Activities/Task 3/images/conjuring 2.jpg" alt="">
+            <h3>Conjuring 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquid est consequatur, autem labore quas aliquam veniam velit culpa nam!</p>
+        </div>
+        <div class="card-item">
+            <img src="/Class Activities/Task 3/images/conjuring 3.jpg" alt="">
+            <h3>Conjuring 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquid est consequatur, autem labore quas aliquam veniam velit culpa nam!</p>
+        </div>
+        <div class="card-item">
+            <img src="/Class Activities/Task 3/images/annabelle.jpg" alt="">
+            <h3>Annabelle</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquid est consequatur, autem labore quas aliquam veniam velit culpa nam!</p>
+        </div>
+        <div class="card-item">
+            <img src="/Class Activities/Task 3/images/annabelle 2.jpg" alt="">
+            <h3>Annabelle 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquid est consequatur, autem labore quas aliquam veniam velit culpa nam!</p>
+        </div>
+        <div class="card-item">
+            <img src="/Class Activities/Task 3/images/annabelle 3.jpg" alt="">
+            <h3>Annabelle 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti aliquid est consequatur, autem labore quas aliquam veniam velit culpa nam!</p>
+        </div>
+    </div>
+
+    <br>
+    <hr id="Image Gallery">
+    <br>
+
+    <!-- Responsive Images Gallery-->
+    <div class="image-container">
+        <img src="/Class Activities/Task 3/images/conjuring 1.jpg" alt="">
+        <img src="/Class Activities/Task 3/images/conjuring 2.jpg" alt="">
+        <img src="/Class Activities/Task 3/images/conjuring 3.jpg" alt="">
+        <img src="/Class Activities/Task 3/images/annabelle.jpg" alt="">
+        <img src="/Class Activities/Task 3/images/annabelle 2.jpg" alt="">
+        <img src="/Class Activities/Task 3/images/annabelle 3.jpg" alt="">
+        <img src="/Class Activities/Task 3/images/nun 1.jpg" alt="">
+        <img src="/Class Activities/Task 3/images/nun2.jpg" alt="">
+    </div>
+
+    <hr id="Flexbox Quiz">
+
+
+    <!-- Responsive quiz layout-->
+    <div class="quiz-container">
+        <div class="question">
+            <p>Choose the correct HTML element for the largest heading:</p>
+        </div>
+        <div class="answer-container">
+            <div><p>a) &lt;h1&gt;</p>
+            </div>
+            <div><p>b) &lt;h6&gt;</p>
+            </div>
+            <div><p>c) &lt;heading&gt;</p>
+            </div>
+            <div><p>d) &lt;head&gt;</p>
+            </div>
+        </div>
+    </div>
+
+    <hr id="To-Do List">
+    <br>
+
+    <!-- Responsive to-do list layout-->
+    <div class="task-container">
+        <div class="task-item">
+            <div class="take-name">
+            <input type="checkbox">
+            <label>Practice Python</label>
+            </div>
+
+            <div class="del">
+                <button class="button">Delete</button>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <div class="take-name">
+                <input type="checkbox">
+                <label>Practice HTML & CSS</label>
+            </div>
+
+            <div class="del">
+                <button>Delete</button>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <div class="take-name">
+                <input type="checkbox">
+                <label>See previous years students work</label>
+            </div>
+
+            <div class="del">
+                <button>Delete</button>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <div class="take-name">
+                <input type="checkbox">
+                <label>Workout</label>
+            </div>
+            
+            <div class="del">
+                <button>Delete</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
