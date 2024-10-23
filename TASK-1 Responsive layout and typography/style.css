@@ -1,6 +1,8 @@
+/*Imported google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
+/* Body with background color "#e9e9e9", font color "black" and font family of "Josefin Sans"*/
 body {
     background-color: #e9e9e9;
     margin: auto;
@@ -8,29 +10,34 @@ body {
     font-family: "Josefin Sans", sans-serif;
 }
 
+/*Heading with font family of "Protest Guerrilla" */
 h1,h3,h2{
     margin: 0%;
     font-family: "Protest Guerrilla", sans-serif;
 }
 
+/* Image logo and navigation bar are displayed in seperate lines and center of the screen*/
 header {
-    margin: 50px;
+    margin: 50px;  /* Standard spacing for desktop*/
     margin-bottom: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Image width sets to 200px with orginal aspect ratio*/
 .logo img {
     width: 200px;
     height: auto;
 }
 
+/* Navigation bar width sets to 50% of the screen*/
 nav {
     width: 50%;
-    margin: 50px;
+    margin: 50px;  /* Standard spacing for desktop*/
 }
 
+/*Navigation links are displayed next to each other with equally space between them and aligns text to center*/
 header nav ul{
     list-style-type: none;
     display: flex;
@@ -39,91 +46,107 @@ header nav ul{
     text-align: center;
 }
 
+/*Removes default underlined of the links*/
 nav ul li a{
     text-decoration: none;
     color: black;
 }
 
+/* Main container with background color "white" and sets with to 70% of the screen*/
 main{
     background-color: white;
     width: 70%;
     margin: auto;
 }
 
+/* h1 sets font size to 90px*/
 main h1{
     font-size: 90px;
 }
 
+/* headings other than main heading sets font size to 40px*/
 .sub-heading {
     font-size: 40px;
 }
 
 .intro, .multi-paragraph{
-    padding: 50px;
+    padding: 50px;    /* Standard spacing for desktop*/
 }
 
+/*paragraph sets font-size to larger*/
 .intro p {
     font-size: larger;
     margin-bottom: 0%;
 }
 
+/* Multi paragraph sections divides into 3 columns layout*/
 .multi-paragraph{
     column-count: 3;
-    column-gap: 50px;
+    column-gap: 50px;  /* Standard spacing for desktop*/ 
     padding-top: 0px;
 }
 
+/* Image album sets grid layout with 4 equally spaced columns*/
 .image-container {
     display: grid;
     grid-template-columns: repeat(4,1fr);
 }
 
+/*Images are inserted with their original aspect ratio*/
 .image-container img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/*featured album fills two rows and two columns from row line 1 and column line 1*/
 .featured-album{
     grid-area: 1/1/span 2/ span 2
 }
 
+/*album-cover-1 fills one row and one column from row line 1 and column line 3*/
 .album-cover-1{
     grid-area: 1/3/span 1/ span 1
 }
 
+/*album-cover-2 fills one row and one column from row line 1 and column line 4*/
 .album-cover-2{
     grid-area: 1/4/span 1/ span 1
 }
 
+/*album-cover-3 fills one row and one column from row line 2 and column line 3*/
 .album-cover-3{
     grid-area: 2/3/span 1/ span 1
 }
 
+/*album-cover-4 fills one row and one column from row line 2 and column line 4*/
 .album-cover-4{
     grid-area: 2/4/span 1/ span 1
 }
 
+/*Author section with 75% width of the screen, displays the description and author image next to each with vertically center.*/
 .author-section {
     margin: auto;
     width: 75%;
     display: flex;
     align-items: center;
-    padding: 50px;
-    gap: 50px;
+    padding: 50px;  /* Standard spacing for desktop*/ 
+    gap: 50px;      /* Standard spacing for desktop*/ 
 }
 
+/* Author section heading sets font size to 50px*/
 .author-section .sub-heading {
     text-align: center;
     font-size: 50px;
 }
 
-
+/* Author image sets width to 200px with circle shape*/
 .author-img img{
     max-width: 200px;
     border-radius: 50%;
 }
 
+/*Footer sets width to 70% of the screen and background color of "#14181d" */
 footer{
     width: 70%;
     margin: auto;
@@ -134,110 +157,132 @@ footer{
     text-align: center;
 }
 
+
+/* Media queries for screen width of 1023px px or lesser */
 @media screen and (max-width: 1023px) {
+
     header, nav {
-        margin: 30px;
+        margin: 30px;  /* Standard spacing for tablet*/ 
     }
 
+    /* Navigation bar width sets to 60% of the screen*/
     nav{
         width: 60%;
         margin-bottom: 0%;
     }
 
+    /* Main container sets with to 80% of the screen*/
     main{
         width: 80%;
     }
 
+    /* Image width sets to 80px with orginal aspect ratio*/
     .logo img{
         width: 80px;
         height: auto;
     }
 
+    /*all headings sets font size to 50px*/
     main h1, .sub-heading{
         text-align: center;
         font-size: 50px;
     }
 
+    /* side padding of second heading of introduction section is sets to 82px in order to show last word of second heading in third line for tablet screen*/
     .intro .sub-heading {
         box-sizing: border-box;
         padding: 0px 82px;
     }
 
+    /* paragraph is sets font-size to larger*/
     p {
         font-size: larger;
     }
 
+    /*Multi paragraph sections converts three column layout into one column layout for tablet screen or lesser size screen*/
     .multi-paragraph{
         column-count: 1;
     }
 
+    /*Image album sets grid layout with 2 equally spaced columns*/
     .image-container{
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* All images fills only one column and one row in grid layout*/
     .image-container div{
         grid-area: span 1;
     }
 
+    /*Album-cover-4 image is hidden*/
     .album-cover-4{
         display: none;
     }
 
     .intro, .multi-paragraph{
-        padding:30px;
+        padding:30px;   /* Standard spacing for tablet*/ 
     }
 
+    /* Author section sets to 100% width of the screen */
     .author-section{
         margin: auto;
         width: 100%;
         box-sizing: border-box;
-        padding: 30px;
-        gap: 30px;
+        padding: 30px;  /* Standard spacing for tablet*/ 
+        gap: 30px;      /* Standard spacing for tablet*/ 
         
     }
 
+    /* footer section sets to 80% width of the screen */
     footer{
         width: 80%;
     }
 }
 
+
+/* Media queries for screen width of 719px px or lesser */
 @media screen and (max-width: 719px){
     header, nav {
-        margin: 20px;
+        margin: 20px;   /* Standard spacing for large mobile*/ 
     }
 
+    /* Main container sets with to 100% of the screen*/
     main{
         width: 100%;
     }
 
+    /* Navigation bar width sets to 80% of the screen*/
     nav{
         width: 80%;
-        margin-bottom: 0%;
     }
     
+    /*Image album sets grid layout of 1 full width column*/
     .image-container{
         grid-template-columns: repeat(1, 1fr);
     }
 
     .intro, .multi-paragraph{
-        padding: 20px;
+        padding: 20px;   /* Standard spacing for large mobile*/ 
     }
 
+    /* side padding of second heading of introduction section is sets to 42px in order to show last word of second heading in third line for large mobile screen*/
     .intro .sub-heading {
         padding: 0px 42px ;
     }
 
+    /*Author description and author image are displayed in seperate line but in reversed order */
     .author-section{
         display: flex;
         flex-direction: column-reverse;
     }
 
     .author-section{
-        padding: 20px;
-        gap:20px
+        padding: 20px;   /* Standard spacing for large mobile*/ 
+        gap:20px        /* Standard spacing for large mobile*/ 
         
     }
 
+    /* footer section sets to 100% width of the screen and adjusted its font-size and padding */
     footer{
         width: 100%;
         padding: 5px;
@@ -246,31 +291,33 @@ footer{
 }
 
 
+/* Media queries for screen width of 539px px or lesser */
 @media screen and (max-width: 539px) {
     header, nav {
-        margin: 12px;
+        margin: 12px;   /* Standard spacing for small mobile*/
     }
 
+    /* Navigation bar width sets to 100% of the screen*/
     nav{
         width: 100%;
-        margin-bottom: 0%;
     }
 
     .intro, .multi-paragraph{
-        padding: 12px;
-        gap: 12px;
+        padding: 12px;    /* Standard spacing for small mobile*/
+        gap: 12px;       /* Standard spacing for small mobile*/
     }
 
+    /* side padding of second heading of introduction section is sets to 52px in order to show three lines of second heading for small mobile screen*/
     .intro .sub-heading {
         padding: 0px 52px;
     }
 
     .author-section{
-        padding: 12px;
+        padding: 12px;  /* Standard spacing for small mobile*/ 
     }
-
+    
+    /* footer section adjusted its font-size */
     footer{
         font-size: 16px;
     }
-
 }
