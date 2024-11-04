@@ -251,9 +251,10 @@ footer{
         width: 100%;
     }
 
-    /* Navigation bar width sets to 80% of the screen*/
+    /* Navigation bar width sets to 80% of the screen and removed margin bottom*/
     nav{
         width: 80%;
+        margin-bottom: 0%;
     }
     
     /*Image album sets grid layout of 1 full width column*/
@@ -297,9 +298,10 @@ footer{
         margin: 12px;   /* Standard spacing for small mobile*/
     }
 
-    /* Navigation bar width sets to 100% of the screen*/
+    /* Navigation bar width sets to 90% of the screen and removed margin bottom*/
     nav{
-        width: 100%;
+        width: 90%;
+        margin-bottom: 0%;
     }
 
     .intro, .multi-paragraph{
