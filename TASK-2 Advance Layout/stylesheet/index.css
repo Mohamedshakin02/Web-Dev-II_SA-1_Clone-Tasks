@@ -16,7 +16,7 @@ header {
   align-items: center;
   color: #FFFFFF;
   font-family: "Teko", sans-serif;
-  box-shadow: 0px 10px 5px black;
+  box-shadow: 0px 10px 5px #070410;
 }
 header .logo {
   padding: 0px;
@@ -53,7 +53,6 @@ header button a {
 }
 
 main {
-  margin: auto;
   max-width: 900px;
   display: grid;
   grid-template-columns: repeat auto-fit, 1fr;
@@ -67,7 +66,7 @@ main {
   color: #FFFFFF;
   font-size: 1.5em;
   margin: 16px;
-  box-shadow: 10px 10px 10px black;
+  box-shadow: 10px 10px 10px #070410;
   display: grid;
 }
 .movie-container .movie-poster {
@@ -200,7 +199,8 @@ main {
     gap: 32px;
   }
   main {
-    margin: 32px auto;
+    margin: 32px 32px;
+    justify-self: center;
     grid-template-areas: "movie1 movie2" "movie3 movie4" "movie5 movie6";
   }
   .movie-container {
@@ -292,6 +292,7 @@ main {
   main {
     max-width: 100%;
     margin: 0px;
+    gap: 0px;
     grid-template-areas: "movie1" "movie2" "movie3" "movie4" "movie5" "movie6";
   }
   .movie-container {
