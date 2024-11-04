@@ -62,7 +62,6 @@ header {
 }
 
 main {
-    margin: auto;
     max-width: 900px;
     display: grid;
     grid-template-columns: repeat (auto-fit, 1fr);
@@ -214,7 +213,8 @@ main {
     }
 
     main{
-        margin: $large-spacing auto;
+        margin: $large-spacing $large-spacing;
+        justify-self: center;
         grid-template-areas: 
         'movie1 movie2'
         'movie3 movie4'
@@ -350,6 +350,7 @@ main {
     main {
         max-width: 100%;
         margin: 0px;
+        gap:0px;
         grid-template-areas: 
         "movie1"
         "movie2"
