@@ -1,16 +1,17 @@
+/*Imported google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Protest+Guerrilla&family=Teko:wght@300..700&display=swap');
 
-$light-blue: #4dccbd;
-$dark-blue: #231651;
-$white: #FFFFFF;
-$black: #070410;
-$small-spacing: 16px;
-$large-spacing: 48px;
-$header-font-size: 3em;
-$button-font-size: 2em;
-$movie-font-size: 1.5em;
-$teko-font: "Teko", sans-serif;
-$lato-font: "Lato", sans-serif;
-$header-shadow: 0px 10px 5px #070410;
-$container-shadow: 10px 10px 10px #070410;
+$light-blue: #4dccbd; //Background color of the page
+$dark-blue: #231651;  //Background color of movie box and header
+$white: #FFFFFF;      // font color
+$black: #070410;      // font color of button
+$small-spacing: 16px;   // Small spacing for desktop
+$large-spacing: 48px;   // Large spacing for desktop
+$header-font-size: 3em;   // Font-size of header
+$button-font-size: 2em;   // Font-size of button
+$movie-font-size: 1.5em;  // Font-size of movie box
+$teko-font: "Teko", sans-serif;   // Font-family of "Teko"
+$lato-font: "Lato", sans-serif;   // Font-family of "Lato"
+$header-shadow: 0px 10px 5px #070410;   // Box shadow of header
+$container-shadow: 10px 10px 10px #070410;  // Box shadow of movie box

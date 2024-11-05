@@ -1,5 +1,7 @@
+//Imported variables partial file
 @import "./variables";
 
+// Mixin for consistent button styling
 @mixin button-style{
     font-size: $button-font-size;
     font-family: $teko-font;
@@ -16,12 +18,15 @@
     }
 }
 
+/* Body with background color of light blue and font family of "lato" */
 body {
     background-color: $light-blue;
     margin: auto;
     font-family: $lato-font;
 }
 
+/* Header with font-family of "teko" and box shadow. The elements in header are 
+displayed next to each with spaced with them*/
 header {
     background-color: $dark-blue;
     width: 100%;
@@ -34,11 +39,13 @@ header {
     font-family: $teko-font;
     box-shadow: $header-shadow;
 
+    // Logo with font size of variable "$header-font-size"
     .logo{
         padding: 0px;
         font-size: $header-font-size;
     }
 
+    // Links inside lists are displayed next each other with gap of variable "$large-spacing"
     ul{
         display: flex;
         gap: $large-spacing;
@@ -46,25 +53,31 @@ header {
         font-size: 1.2em;
     }
 
+    // Removed bullet mark from list
     li {
         list-style-type: none;
     }
 
+    //Removed underlined text and color of the links sets to white
     a{
         text-decoration: none;
-        color: white;
+        color: $white;
         padding: 0%;
     }
 
+    // Applying button style mixin to button in header
     button{
         @include button-style()
     }
 }
 
+/*Main container sets maximum width to 900px with margin and sets grid layout with two equal
+columns with gap*/
 main {
     max-width: 900px;
     display: grid;
     grid-template-columns: repeat (auto-fit, 1fr);
+    /*Created grid layout for desktop using grid-item names*/
     grid-template-areas: 
     'movie1 movie1'
     'movie2 movie3'
@@ -76,6 +89,10 @@ main {
     gap: $small-spacing;
 }
 
+/* Common movie box styling with background color variable "$dark-blue",
+text color variable "$white", font size of variable "font-size: $movie-font-size",
+margin of variable "small-spacing", box shadow and sets display to grid */
+
 .movie-container {
     background-color: $dark-blue;
     color: $white;
@@ -84,11 +101,13 @@ main {
     box-shadow: $container-shadow;
     display: grid;
 
+    // assgined name "poster" to movie-poster item to create grid layout for each movie container
     .movie-poster {
         grid-area: poster;
         display: grid;
     }
 
+    // assgined name "desc" to movie-desc item and sets display property of movie-desc to "flex"
     .movie-desc {
         grid-area: desc;
         box-sizing: border-box;
@@ -96,39 +115,51 @@ main {
         display: flex;
         gap: $small-spacing;
 
+        // removes the paragraph spacing
         p{
             padding: 0%;
             margin: 0%;
         }
     }
 
+    // assgined name "button" to movie-desc item
     button {
         grid-area: button;
     }
 
+    // images are sets to width and height to 400px and it fills the images
     img {
         height: 400px;
         width:400px;
         object-fit: cover;
     }
 
+    // Specific layout adjustments for different movie containers
+
+    // Movie-container-1
     &-1{
+        // assgined name "movie1" to movie-container-1 item to create grid layout for main container, specifies the size of each row 
+        // Created grid layout of movie-container1 using grid-item names
+
         grid-area: movie1;
         grid-template-rows: 1fr 0.6fr;
         grid-template-areas:
         "poster poster "
         "desc button";
 
+        // images sets width to 100% and height to 250px and adjusted position of the image
         img {
             width: 100%;
             height: 250px;
             object-position: 0% 12%;
         }
 
+        // Width of the paragarph in movie-desc item
         p{
             flex: 1
         }
 
+        // Applying button style mixin to button in movie-desc item and sets width of button using flex property and sets height of button to 100%
         button {
             @include  button-style();
             height:100%;
@@ -136,6 +167,7 @@ main {
             padding: $small-spacing;
             flex: 0.6;
 
+            // Adjusted the spacing of the button text to show two lines of the text.
             a{
                 box-sizing: border-box;
                 padding: 0px 70px;
@@ -147,13 +179,112 @@ main {
         
     }
 
+    // Movie-container-2
     &-2{
+        // assgined name "movie2" to movie-container-2 item to create grid layout for main container, specifies the size of each row 
+        // Created grid layout of movie-container-2 using grid-item names
+
         grid-area: movie2;
         grid-template-rows: 1.25fr 1fr;
         grid-template-areas:
         "poster"
         "desc";
 
+        // Elements in movie-desc item are displayed in one line after the other with vertically spaced between them.
+        .movie-desc {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        // images sets width to 100% and height to 100% 
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        // Applying button style mixin to button in movie-conatiner-2
+        button {
+            @include button-style();
+        }
+
+    }
+
+    // Movie-container-3
+    &-3{
+        // Assgined name "movie3" to movie-container-3 item and Reusing styles for movie-container-2 to movie-container-3
+
+        grid-area: movie3;
+        @extend .movie-container-2;
+    }
+
+    // Movie-container-4
+    &-4{
+        // Assgined name "movie4" to movie-container-4 item
+
+        grid-area: movie4;
+        grid-template-areas:
+        "poster desc";
+
+        // Elements in movie-desc item are displayed in one line after the other with vertically spaced between them.
+        .movie-desc {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        // Applying button style mixin to button in movie-conatiner-4
+        button {
+            @include button-style()
+        }
+    }
+
+    // Movie-container-5
+    &-5{
+        // Assgined name "movie5" to movie-container-5 item and Reusing styles for movie-container-4 to movie-container-5
+
+        grid-area: movie5;
+        @extend .movie-container-4;
+    }
+
+    // Movie-container-6
+    &-6{
+        // Assgined name "movie6" to movie-container-6 item and Reusing styles for movie-container-4 to movie-container-6
+
+        grid-area: movie6;
+        @extend .movie-container-4;
+    }
+}
+
+/* Media queries for screen width of 1023px px or lesser */
+@media screen and (max-width: 1023px) {
+    
+    $large-spacing: 32px;  // Large spacing for tablet
+
+    /* Changed spacing between the links in header for tablet screen*/
+    header{
+        ul{
+            gap: $large-spacing;
+        }
+    }
+
+    /* Adjusted margins for main-container and centered horizonally */
+    main{
+        margin: $large-spacing $large-spacing;
+        justify-self: center;
+
+        //Changed grid layout for tablet
+        grid-template-areas: 
+        'movie1 movie2'
+        'movie3 movie4'
+        'movie5 movie6'
+    ;
+    }
+
+    /* Common movie box styling for tablet screen */
+    .movie-container{
+        // Responsive columns to make sure all elements should displayed properly in given screen
+        grid-auto-columns: minmax(100px, 1fr);
+
+        // Elements in movie-desc item of all movie containers are displayed in one line after the other with vertically spaced between them.
         .movie-desc {
             flex-direction: column;
             justify-content: space-between;
@@ -162,195 +293,107 @@ main {
         img {
             width: 100%;
             height: 100%;
-        }
-
-
-        button {
-            @include button-style();
-        }
-
-    }
-
-    &-3{
-        grid-area: movie3;
-        @extend .movie-container-2;
-    }
-
-    &-4{
-        grid-area: movie4;
-        grid-template-areas:
-        "poster desc";
-
-        .movie-desc {
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        button {
-            @include button-style()
-        }
-    }
-
-    &-5{
-        grid-area: movie5;
-        @extend .movie-container-4;
-    }
-
-    &-6{
-        grid-area: movie6;
-        @extend .movie-container-4;
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    
-    $large-spacing: 32px;
-
-    header{
-        ul{
-            gap: $large-spacing;
-        }
-    }
-
-    main{
-        margin: $large-spacing $large-spacing;
-        justify-self: center;
-        grid-template-areas: 
-        'movie1 movie2'
-        'movie3 movie4'
-        'movie5 movie6'
-    ;
-    }
-
-    .movie-container{
-        grid-auto-columns: minmax(100px, 1fr);
-
-        img {
-            height: 100px;
-            width:100px;
             object-fit: cover;
         }
 
-        .movie-desc {
-            flex-direction: column;
-            justify-content: space-between;
+        button {
+            box-sizing: border-box;
+            padding: $small-spacing;
+            a{
+                box-sizing: border-box;
+                padding: 0px 101px;
+                display: flex;
+                line-height: 50px;
+                justify-content: center;
+            }
         }
-
+        
+        // Movie-container-1
         &-1 {
+            // Changed grid layout of movie-container1 for tablet screen and specifies the size of each row
             grid-template-areas: 
             "poster"
             "desc";
 
             grid-template-rows: 0.5fr 1fr;
 
-            
-            img {
-                width: 100%;
-                height: 100%;
-                object-position: 0%;
-                object-fit: cover;
-            }
-
+            //Paragraph and button sets width to full width of the movie-container
             p, button{
                 flex: 0
             }
-
-            button {
-                a{
-                    padding: 0px 101px;
-                }
-            }
         }
 
+        // Movie-container-2
         &-2{
+            //specifies the size of each row
+
             grid-template-rows: 0.5fr 1fr;
-            
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            button {
-                box-sizing: border-box;
-                padding: $small-spacing;
-                a{
-                    box-sizing: border-box;
-                    padding: 0px 101px;
-                    display: flex;
-                    line-height: 50px;
-                    justify-content: center;
-                }
-            }
         }
 
+        // Movie-container-3
         &-3{
-            @extend .movie-container-2
+            //Reusing styles for movie-container-2 to movie-container-3
+
+            @extend .movie-container-2;
         }
 
-        &-4 {
+        // Movie-container-4
+        &-4{
+            //Changed grid layout of movie-container4 for tablet screen and specifies the size of each row
             grid-template-areas:
             "poster"
             "desc";
 
             grid-template-rows: 0.5fr 1fr;
-
-            
-            img {
-                width: 100%;
-                height: 100%;
-                object-position: 0%;
-                object-fit: cover;
-            }
-
-            button {
-                box-sizing: border-box;
-                padding: $small-spacing;
-                a{
-                    box-sizing: border-box;
-                    padding: 0px 101px;
-                    display: flex;
-                    line-height: 50px;
-                    justify-content: center;
-                }
-            }
         }
 
+        // Movie-container-5
         &-5 {
+            //Reusing styles for movie-container-4 to movie-container-5
+
             @extend .movie-container-4;
         }
 
+        // Movie-container-6
         &-6 {
+            //Reusing styles for movie-container-4 to movie-container-6
+
             @extend .movie-container-4;
         }
     }
 }
 
+/* Media queries for screen width of 719px px or lesser */
 @media screen and (max-width: 719px) {
 
-    $large-spacing: 16px;
-    $header-font-size: 2em;
-    $header-shadow: 0px 0px 0px;
-    $container-shadow:0px 0px 0px;
-    
+    $large-spacing: 16px;  // Large spacing for mobile
+    $header-font-size: 2em;  // Header font size for mobile
+    $header-shadow: 0px 0px 0px;  // box shadow of header
+    $container-shadow:0px 0px 0px;  // box shadow of movie box
 
+    /* Adjusted the header margin and removes the box shadow in header */
     header {
         margin-bottom: $small-spacing;
         box-shadow: $header-shadow;
 
+        // Header font size sets to variable "$header-font-size"
         .logo{
             font-size: $header-font-size;
         }
 
+        // Removes Navigation links from header
         nav{
             display: none;
         }
     }
-
+    
+    /* Main container sets width to 100% and removes spacing from main container */
     main {
         max-width: 100%;
         margin: 0px;
         gap:0px;
+
+        //Changed grid layout for mobile
         grid-template-areas: 
         "movie1"
         "movie2"
@@ -360,16 +403,21 @@ main {
         "movie6";
     }
     
+    /* Common movie box styling for tablet screen */
     .movie-container {
+        // Removes margin from movie box except margin-bottom and removes the box shadow of movie box and size of the rows are adjusted to the content inside movie-box
+
         margin:0px;
         margin-bottom: $small-spacing;
         box-shadow: $container-shadow;
         grid-template-rows: auto;
 
+        // Removes the vertical space between the elements
         .movie-desc{
             justify-content: unset;
         }
 
+        // Removes the padding of text of the button
         button {
             a{
                 padding: 0px;
