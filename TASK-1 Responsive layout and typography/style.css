@@ -83,7 +83,7 @@ main h1{
 .multi-paragraph{
     column-count: 3;
     column-gap: 50px;  /* Standard spacing for desktop*/ 
-    padding-top: 0px;
+    padding-top: 0px !important;
 }
 
 /* Image album sets grid layout with 4 equally spaced columns*/
@@ -182,21 +182,20 @@ footer{
         height: auto;
     }
 
-    /*all headings sets font size to 50px*/
-    main h1, .sub-heading{
+    /*all headings sets font size to 65px*/
+    main h1, .sub-heading, .author-section .sub-heading {
         text-align: center;
-        font-size: 50px;
+        font-size: 65px;
     }
 
-    /* side padding of second heading of introduction section is sets to 82px in order to show last word of second heading in third line for tablet screen*/
-    .intro .sub-heading {
-        box-sizing: border-box;
-        padding: 0px 82px;
+    .intro, .multi-paragraph{
+        padding:30px;   /* Standard spacing for tablet*/ 
     }
 
-    /* paragraph is sets font-size to larger*/
-    p {
-        font-size: larger;
+    /* All paragraphs is sets font-size to 24px*/
+    .intro p, p {
+        font-size: 24px;
+        margin-bottom: 0%;
     }
 
     /*Multi paragraph sections converts three column layout into one column layout for tablet screen or lesser size screen*/
@@ -217,10 +216,6 @@ footer{
     /*Album-cover-4 image is hidden*/
     .album-cover-4{
         display: none;
-    }
-
-    .intro, .multi-paragraph{
-        padding:30px;   /* Standard spacing for tablet*/ 
     }
 
     /* Author section sets to 100% width of the screen */
@@ -266,11 +261,6 @@ footer{
         padding: 20px;   /* Standard spacing for large mobile*/ 
     }
 
-    /* side padding of second heading of introduction section is sets to 42px in order to show last word of second heading in third line for large mobile screen*/
-    .intro .sub-heading {
-        padding: 0px 42px ;
-    }
-
     /*Author description and author image are displayed in seperate line but in reversed order */
     .author-section{
         display: flex;
@@ -306,12 +296,6 @@ footer{
 
     .intro, .multi-paragraph{
         padding: 12px;    /* Standard spacing for small mobile*/
-        gap: 12px;       /* Standard spacing for small mobile*/
-    }
-
-    /* side padding of second heading of introduction section is sets to 52px in order to show three lines of second heading for small mobile screen*/
-    .intro .sub-heading {
-        padding: 0px 52px;
     }
 
     .author-section{
