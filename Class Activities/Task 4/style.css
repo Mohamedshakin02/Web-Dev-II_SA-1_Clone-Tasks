@@ -170,6 +170,7 @@ textarea {
     grid-area: image;  /* area name of the image*/
     height: 100%;
     width: 100%;
+    display: grid;
 }
 
 .product-title {
