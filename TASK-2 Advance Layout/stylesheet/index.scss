@@ -218,8 +218,10 @@ margin of variable "small-spacing", box shadow and sets display to grid */
     // Movie-container-4
     &-4{
         // Assgined name "movie4" to movie-container-4 item
+        // Two columns layout with equal column width
 
         grid-area: movie4;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
         "poster desc";
 

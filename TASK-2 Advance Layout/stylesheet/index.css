@@ -98,8 +98,7 @@ margin of variable "small-spacing", box shadow and sets display to grid */
   grid-area: button;
 }
 .movie-container img {
-  height: 400px;
-  width: 400px;
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -153,7 +152,6 @@ margin of variable "small-spacing", box shadow and sets display to grid */
   justify-content: space-between;
 }
 .movie-container-2 img, .movie-container-3 img {
-  width: 100%;
   height: 100%;
 }
 .movie-container-2 button, .movie-container-3 button {
@@ -176,6 +174,7 @@ margin of variable "small-spacing", box shadow and sets display to grid */
 }
 .movie-container-4, .movie-container-6, .movie-container-5 {
   grid-area: movie4;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "poster desc";
 }
 .movie-container-4 .movie-desc, .movie-container-6 .movie-desc, .movie-container-5 .movie-desc {
