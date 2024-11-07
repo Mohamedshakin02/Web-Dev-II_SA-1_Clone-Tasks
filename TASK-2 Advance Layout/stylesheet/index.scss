@@ -271,6 +271,9 @@ margin of variable "small-spacing", box shadow and sets display to grid */
         margin: $large-spacing $large-spacing;
         justify-self: center;
 
+        // Responsive columns to make sure all elements should displayed properly in given screen
+        grid-auto-columns: minmax(100px, 1fr);
+
         //Changed grid layout for tablet
         grid-template-areas: 
         'movie1 movie2'
@@ -281,8 +284,8 @@ margin of variable "small-spacing", box shadow and sets display to grid */
 
     /* Common movie box styling for tablet screen */
     .movie-container{
-        // Responsive columns to make sure all elements should displayed properly in given screen
-        grid-auto-columns: minmax(100px, 1fr);
+        // Used minmax() to make resposive column, it adjusts the size of the column based on the given screen
+        grid-template-columns: minmax(100px,1fr);
 
         // Elements in movie-desc item of all movie containers are displayed in one line after the other with vertically spaced between them.
         .movie-desc {
@@ -290,12 +293,14 @@ margin of variable "small-spacing", box shadow and sets display to grid */
             justify-content: space-between;
         }
 
+        // To fit the image in given container
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
+        // It displays button's text in two lines and sets horizontally center
         button {
             box-sizing: border-box;
             padding: $small-spacing;
@@ -340,11 +345,12 @@ margin of variable "small-spacing", box shadow and sets display to grid */
         // Movie-container-4
         &-4{
             //Changed grid layout of movie-container4 for tablet screen and specifies the size of each row
+
+            grid-template-rows: 0.5fr 1fr;
             grid-template-areas:
             "poster"
             "desc";
 
-            grid-template-rows: 0.5fr 1fr;
         }
 
         // Movie-container-5

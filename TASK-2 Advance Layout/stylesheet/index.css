@@ -213,11 +213,12 @@ margin of variable "small-spacing", box shadow and sets display to grid */
   main {
     margin: 32px 32px;
     justify-self: center;
+    grid-auto-columns: minmax(100px, 1fr);
     grid-template-areas: "movie1 movie2" "movie3 movie4" "movie5 movie6";
   }
   /* Common movie box styling for tablet screen */
   .movie-container {
-    grid-auto-columns: minmax(100px, 1fr);
+    grid-template-columns: minmax(100px, 1fr);
   }
   .movie-container .movie-desc {
     flex-direction: column;
@@ -251,8 +252,8 @@ margin of variable "small-spacing", box shadow and sets display to grid */
     grid-template-rows: 0.5fr 1fr;
   }
   .movie-container-4, .movie-container-5, .movie-container-6 {
-    grid-template-areas: "poster" "desc";
     grid-template-rows: 0.5fr 1fr;
+    grid-template-areas: "poster" "desc";
   }
 }
 /* Media queries for screen width of 719px px or lesser */
