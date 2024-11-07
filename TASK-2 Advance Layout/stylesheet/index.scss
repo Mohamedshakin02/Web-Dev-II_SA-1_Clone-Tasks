@@ -127,10 +127,9 @@ margin of variable "small-spacing", box shadow and sets display to grid */
         grid-area: button;
     }
 
-    // images are sets to width and height to 400px and it fills the images
+    // images are sets to max-width to 100% and it fills the images
     img {
-        height: 400px;
-        width:400px;
+        max-width: 100%;
         object-fit: cover;
     }
 
@@ -196,9 +195,8 @@ margin of variable "small-spacing", box shadow and sets display to grid */
             justify-content: space-between;
         }
 
-        // images sets width to 100% and height to 100% 
+        // image sets height to 100% to fill the image inside the poster container
         img {
-            width: 100%;
             height: 100%;
         }
 
