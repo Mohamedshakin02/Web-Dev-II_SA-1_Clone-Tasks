@@ -276,7 +276,7 @@ margin of variable "small-spacing", box shadow and sets display to grid */
     gap: 0px;
     grid-template-areas: "movie1" "movie2" "movie3" "movie4" "movie5" "movie6";
   }
-  /* Common movie box styling for tablet screen */
+  /* Common movie box styling for mobile screen */
   .movie-container {
     margin: 0px;
     margin-bottom: 16px;

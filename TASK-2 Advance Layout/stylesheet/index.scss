@@ -300,7 +300,7 @@ margin of variable "small-spacing", box shadow and sets display to grid */
             object-fit: cover;
         }
 
-        // It displays button's text in two lines and sets horizontally center
+        // It displays button's text in two lines and centers horizontally
         button {
             box-sizing: border-box;
             padding: $small-spacing;
@@ -409,7 +409,7 @@ margin of variable "small-spacing", box shadow and sets display to grid */
         "movie6";
     }
     
-    /* Common movie box styling for tablet screen */
+    /* Common movie box styling for mobile screen */
     .movie-container {
         // Removes margin from movie box except margin-bottom and removes the box shadow of movie box and size of the rows are adjusted to the content inside movie-box
 
