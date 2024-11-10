@@ -71,7 +71,7 @@ header {
     }
 }
 
-/*Main container sets maximum width to 900px with margin and sets grid layout with two equal
+/*Main container sets maximum width to 900px with margin and centers the main container and sets grid layout with two equal
 columns with gap*/
 main {
     max-width: 900px;
@@ -85,8 +85,9 @@ main {
     'movie5 movie5'
     'movie6 movie6'
     ;
-    margin: $large-spacing auto;
+    margin: $large-spacing $large-spacing;
     gap: $small-spacing;
+    justify-self: center;
 }
 
 /* Common movie box styling with background color variable "$dark-blue",
